@@ -15,6 +15,7 @@ namespace KartingApp.Domain.Entities
         [Required(ErrorMessage = "Please enter a Description")]
         public string Description { get; set; }
 
+        /* just some change to test github */
         public ICollection<Race> Races { get; set; }
     }
 }
