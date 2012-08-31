@@ -38,7 +38,8 @@ namespace KartingApp.Domain.Concrete
 
         public IQueryable<Driver> Drivers
         {
-            get { return context.Drivers.Include("RaceResults"); }
+            get { return context.Drivers; }
+            //get { return context.Drivers.Include("RaceResults"); }
         }
 
         public void DeleteDriver(Driver driver)
