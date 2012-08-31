@@ -17,11 +17,6 @@ namespace KartingApp.Domain.Concrete
             get { return context.RaceResults; }
         }
 
-        //public IQueryable<Driver> Drivers
-        //{
-        //    get { return context.Drivers; }
-        //}
-
         public void SaveDriver(Driver driver)
         {
             if (driver.DriverID == 0)
@@ -38,8 +33,7 @@ namespace KartingApp.Domain.Concrete
 
         public IQueryable<Driver> Drivers
         {
-            get { return context.Drivers; }
-            //get { return context.Drivers.Include("RaceResults"); }
+            get { return context.Drivers.Include("RaceResults"); }
         }
 
         public void DeleteDriver(Driver driver)

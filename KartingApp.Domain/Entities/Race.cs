@@ -30,7 +30,14 @@ namespace KartingApp.Domain.Entities
         {
             get 
             {
-                return (string.Format("{0:dd/MM/yyyy}", this.Date) + ", " + this.Track.Description);
+                if (Track != null)
+                {
+                    return (string.Format("{0:dd/MM/yyyy}", Date) + ", " + Track.Description);
+                }
+                else
+                {
+                    return "";
+                }
             }
         }
     }

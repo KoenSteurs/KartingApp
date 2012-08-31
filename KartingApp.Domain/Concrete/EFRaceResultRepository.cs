@@ -14,7 +14,7 @@ namespace KartingApp.Domain.Concrete
 
         public IQueryable<RaceResult> RaceResults
         {
-            get { return context.RaceResults; }
+            get { return context.RaceResults.Include("Race"); }
         }
 
         public IQueryable<Driver> Drivers

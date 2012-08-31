@@ -5,7 +5,8 @@
 }
 
 <h2>Races</h2>
-@foreach (var p in Model) {
+@foreach (var p in Model) 
+{
         @Html.ActionLink(p.RaceDescription, "Detail", new { id = p.RaceID })<br />
 }
 

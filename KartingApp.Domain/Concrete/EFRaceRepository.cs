@@ -19,13 +19,13 @@ namespace KartingApp.Domain.Concrete
 
         public IQueryable<Race> Races
         {
-            get { return context.Races.Include("RaceResults"); }
+            get { return context.Races.Include("RaceResults").Include("Track"); }
         }
 
-        public IQueryable<RaceResult> RaceResults
-        {
-            get { return context.RaceResults; }
-        }
+        //public IQueryable<RaceResult> RaceResults
+        //{
+        //    get { return context.RaceResults; }
+        //}
 
         public void SaveRace(Race Race)
         {

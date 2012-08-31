@@ -31,11 +31,6 @@ namespace KartingApp.WebUI.Controllers
             return View(race);
         }
 
-        //public string GetRaceResults(int id = 1)
-        //{
-        //    return "<div>AAA - 11.11</div><div>BBBB - 22.22</div>";
-        //}
-
         public ViewResult Create()
         {
             ViewData["Track"] = new SelectList(repository.Tracks.ToList(), "TrackID", "Description", null);

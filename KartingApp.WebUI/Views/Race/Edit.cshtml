@@ -28,12 +28,15 @@
     <input type="submit" value="Save" />
 }
 
-@using (Html.BeginForm("Delete", "Race",
-    FormMethod.Post, new { enctype = "multipart/form-data" }))
-{ 
-    <div>@Html.EditorFor(x => x.RaceID)</div>
-    @Html.HiddenFor(x => x.RaceDescription)
-    <input type="submit" value="Delete" />
+@if (Model.RaceID != 0)
+{
+    using (Html.BeginForm("Delete", "Race",
+        FormMethod.Post, new { enctype = "multipart/form-data" }))
+    { 
+        <div>@Html.EditorFor(x => x.RaceID)</div>
+@*        @Html.HiddenFor(x => x.RaceDescription)*@
+        <input type="submit" value="Delete" />
+    }
 }
 
 <br />@Html.ActionLink("Cancel and return to List", "List")

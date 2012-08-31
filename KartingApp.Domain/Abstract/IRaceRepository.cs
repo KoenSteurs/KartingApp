@@ -10,7 +10,7 @@ namespace KartingApp.Domain.Abstract
     {
         IQueryable<Race> Races { get; }
         IQueryable<Track> Tracks { get; }
-        IQueryable<RaceResult> RaceResults { get; }
+        //IQueryable<RaceResult> RaceResults { get; }
         void SaveRace(Race race);
         void DeleteRace(Race race);
     }
