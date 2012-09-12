@@ -1,6 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Web.Mvc;
 using KartingApp.Domain.Other;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace KartingApp.Domain.Entities
 {
