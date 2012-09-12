@@ -8,7 +8,7 @@
 
 @if (Model != null)
 {
-    @foreach (var p in Model)
+    foreach (var p in Model)
     {
         @Html.ActionLink(p.Name + "," + p.Hometown, "Detail", new { id = p.DriverID })<br />
     }
