@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using KartingApp.Domain.Abstract;
 using KartingApp.Domain.Entities;
+using KartingApp.Domain.Concrete;
 
 namespace KartingApp.WebUI.Controllers
 {
@@ -12,7 +13,8 @@ namespace KartingApp.WebUI.Controllers
     {
         private IDriverRepository repository;
 
-        public DriverController(IDriverRepository driverRepository) {
+        public DriverController(IDriverRepository driverRepository)
+        {
             repository = driverRepository;
         }
 
